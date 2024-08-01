@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let crumb of breadcrumbs;let last=last">
+    <span [routerLink]="crumb.url" [routerLinkActive]="crumb.label">
+      {{crumb.label}}
+    </span>
+    <span *ngIf="!last">/</span>
+  </li>
+</ul>
